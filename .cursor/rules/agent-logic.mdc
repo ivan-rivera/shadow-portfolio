@@ -1,0 +1,8 @@
+---
+description: Rules for LLM agent structure and communication
+globs: **/agents/*.py
+---
+- Agents must return structured JSON only
+- Do not embed API calls inside agents
+- Agents should not call each other — orchestration controls flow
+- Avoid overengineering MVP features
