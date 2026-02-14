@@ -27,3 +27,5 @@ tmp/
 .DS_Store
 .sqlite3
 .sqlite
+
+.specstory/

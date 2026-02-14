@@ -84,7 +84,7 @@ exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "__pycache__", "build"
 
 [tool.ruff.lint]
 select = [
-	"E", "W", "F", "I", "B", "C4", "UP", "ARG", "SIM", "PTH", "RUF", "ASYNC", "S", 
+	"E", "W", "F", "I", "B", "C4", "UP", "ARG", "SIM", "PTH", "RUF", "ASYNC", "S",
 	"A", "DTZ", "T10", "ICN", "LOG", "G", "PIE", "PYI", "RSE", "RET", "SLF", "SLOT",
 	"INT", "PGH", "PL", "TRY", "FLY", "PERF", "FURB", "T20", "FA", "ISC", "COM", "TID",
 ]

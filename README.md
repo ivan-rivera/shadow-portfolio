@@ -46,8 +46,8 @@ Primary goals:
 - Structured trade proposal output (JSON)
 
 **Broker / Paper Trading**
-- Primary candidate: Alpaca Paper Trading  
-- Alternative: IBKR Paper Trading  
+- Primary candidate: Alpaca Paper Trading
+- Alternative: IBKR Paper Trading
 - Optional: Custom simulated paper broker
 
 **Storage & Memory**
