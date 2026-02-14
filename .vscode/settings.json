@@ -1,3 +1,6 @@
 {
-    "specstory.cloudSync.enabled": "never"
+    "specstory.cloudSync.enabled": "never",
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/ivan/.local/bin:${env:PATH}"
+    }
 }
