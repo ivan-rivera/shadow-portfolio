@@ -1,6 +1,6 @@
 ---
 description: Testing and validation rules
-globs: **/tests/*.py, **/test_*.py, **/test/**/*.py
+globs: **/tests/*.py
 ---
 
 - Use pytest for testing, NEVER use unittest or import from it
