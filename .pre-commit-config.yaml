@@ -23,6 +23,7 @@ repos:
             exclude: ^(docs/|analytics/)
             additional_dependencies:
                 - pydantic
+                - fastapi
                 - types-PyYAML
     - repo: https://github.com/astral-sh/ruff-pre-commit
       rev: v0.15.0
