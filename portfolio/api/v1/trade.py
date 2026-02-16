@@ -1,26 +1,17 @@
 """
 Initiate auto-trading flow
 
-Currently this endpoint is a stub. It returns an acknowledgement of the request
-and triggers a background job to trigger the trade service. For now the background
-job merely prints a message to the console.
+This endpoint uses the trading service to trigger a trading run.
 """
 
-from functools import lru_cache
 from typing import Annotated
 
 from fastapi import APIRouter, BackgroundTasks, Depends
 
 from portfolio.schemas.trade import TradeAcknowledgement
-from portfolio.services.trade import TradeService
+from portfolio.services.trade import TradeService, get_trade_service
 
 router = APIRouter()
-
-
-@lru_cache
-def get_trade_service() -> TradeService:
-    """Return the shared TradeService instance (stateful, singleton)."""
-    return TradeService()
 
 
 @router.post(
