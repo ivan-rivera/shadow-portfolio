@@ -6,4 +6,4 @@ class TradeService:
 
     def run(self) -> None:
         """Execute the trade flow. Stub implementation prints hello world."""
-        print("Hello, world!")
+        print("Hello, world!")  # noqa: T201
