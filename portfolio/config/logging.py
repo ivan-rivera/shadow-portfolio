@@ -7,10 +7,7 @@ from logging.config import dictConfig
 
 DEFAULT_LOG_LEVEL = "INFO"
 ALLOWED_LOG_LEVELS = {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
-LOG_FORMAT = (
-    "%(asctime)s %(levelname)s [%(name)s] "
-    "[process=%(process)d thread=%(threadName)s] %(message)s"
-)
+LOG_FORMAT = "%(asctime)s %(levelname)s [%(name)s] [process=%(process)d thread=%(threadName)s] %(message)s"
 LOG_DATE_FORMAT = "%Y-%m-%dT%H:%M:%S%z"
 
 
