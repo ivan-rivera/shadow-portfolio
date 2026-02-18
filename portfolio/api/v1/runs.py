@@ -9,6 +9,7 @@ run status, trades conducted, total value purchased, total value spent.
 Each run contains ticker, quantity, price, position, buy/sell, justification.
 
 For now, both endpoints return hardcoded placeholder data.
+# TODO: implement actual endpoint logic
 """
 
 from datetime import UTC, datetime
