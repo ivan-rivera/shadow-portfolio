@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "SQLite": {
+            "command": "npx",
+            "args": ["-y", "mcp-sqlite", "./data/portfolio.db"]
+        }
+    }
+}
