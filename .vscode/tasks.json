@@ -5,14 +5,8 @@
             "label": "Run Tests",
             "type": "shell",
             "command": "make test",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            },
+            "group": { "kind": "test", "isDefault": true },
+            "presentation": { "reveal": "always", "panel": "dedicated" },
             "problemMatcher": []
         },
         {
@@ -20,10 +14,7 @@
             "type": "shell",
             "command": "make lint",
             "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            },
+            "presentation": { "reveal": "always", "panel": "dedicated" },
             "problemMatcher": []
         },
         {
@@ -39,10 +30,67 @@
                 "showReuseMessage": false,
                 "clear": true
             },
-            "group": {
-                "kind": "test",
-                "isDefault": false
-            }
+            "group": { "kind": "test", "isDefault": false }
+        },
+        {
+            "label": "Test Trade (POST)",
+            "type": "shell",
+            "command": "curl -i -X POST localhost:8000/api/v1/trade",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": { "kind": "test", "isDefault": false }
+        },
+        {
+            "label": "Test Resume (POST)",
+            "type": "shell",
+            "command": "curl -i -X POST localhost:8000/api/v1/resume",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": { "kind": "test", "isDefault": false }
+        },
+        {
+            "label": "List Runs (GET)",
+            "type": "shell",
+            "command": "curl -i 'localhost:8000/api/v1/runs?period=day'",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": { "kind": "test", "isDefault": false }
+        },
+        {
+            "label": "Get Run by ID (GET)",
+            "type": "shell",
+            "command": "curl -i localhost:8000/api/v1/runs/run-001",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": { "kind": "test", "isDefault": false }
         }
     ]
 }
