@@ -17,6 +17,7 @@ dependencies = [
 	"pydantic-settings>=2.13.0",
 	"alpaca-py>=0.43.2",
 	"sqlmodel>=0.0.33",
+	"finnhub-python>=2.4.27",
 	"pysqlite3>=0.6.0",
 	"braintrust>=0.5.5",
 	"agno>=2.4.8",
