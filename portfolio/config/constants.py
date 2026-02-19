@@ -5,3 +5,7 @@ project modules to avoid circular dependencies.
 """
 
 SAMPLER = "simple"
+
+NEWS_LOOKBACK_DAYS = 30
+FUNDAMENTALS_LOOKBACK_DAYS = 365
+INDICATORS_LOOKBACK_DAYS = 90
