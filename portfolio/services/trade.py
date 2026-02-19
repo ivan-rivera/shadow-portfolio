@@ -15,6 +15,7 @@ class TradeService:
     def __init__(self, settings: Settings, sampler: BaseSampler) -> None:
         self._settings = settings
         self._sampler = sampler
+
     def run(self) -> None:
         """Execute the trade flow by fetching and printing the latest MSFT price."""
         # TODO: clean this up! This is just a test to see if we can call the API
