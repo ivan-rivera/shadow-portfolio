@@ -19,6 +19,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
+    finnhub_api_key: str
     alpaca_api_key: str
     alpaca_secret_key: str
     alpaca_base_url: str = "https://paper-api.alpaca.markets"
