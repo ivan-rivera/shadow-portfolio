@@ -12,4 +12,7 @@ class ProfileRetriever:
         self._client = finnhub.Client(api_key=get_settings().finnhub_api_key)
 
     def fetch(self, ticker: str) -> dict:
+        """
+        Fetches company profile information for a ticker.
+        """
         return self._client.company_profile2(symbol=ticker)

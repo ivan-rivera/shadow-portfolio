@@ -14,4 +14,7 @@ class FundamentalsRetriever:
         self._client = finnhub.Client(api_key=get_settings().finnhub_api_key)
 
     def fetch(self, ticker: str) -> dict:
+        """"
+        Fetches basic financial statements for a ticker.
+        """
         return self._client.company_basic_financials(ticker, "all")

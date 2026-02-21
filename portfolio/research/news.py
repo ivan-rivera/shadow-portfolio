@@ -16,6 +16,9 @@ class NewsRetriever:
         self._client = finnhub.Client(api_key=get_settings().finnhub_api_key)
 
     def fetch(self, ticker: str) -> list[dict]:
+        """
+        Fetches recent news articles for a ticker.
+        """
         end = date.today()
         start = end - timedelta(days=self._lookback_days)
         return self._client.company_news(

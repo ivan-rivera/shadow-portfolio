@@ -10,12 +10,16 @@ from portfolio.config.settings import get_settings
 
 class IndicatorsRetriever:
     """Fetches daily OHLCV candlestick data for a ticker."""
+    # TODO: other indicators in addition to candlesticks?
 
     def __init__(self, lookback_days: int = INDICATORS_LOOKBACK_DAYS):
         self._lookback_days = lookback_days
         self._client = finnhub.Client(api_key=get_settings().finnhub_api_key)
 
     def fetch(self, ticker: str) -> dict:
+        """
+        Fetches daily OHLCV candlestick data for a ticker.
+        """
         end = datetime.now()
         start = end - timedelta(days=self._lookback_days)
         return self._client.stock_candles(
