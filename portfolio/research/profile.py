@@ -11,7 +11,7 @@ from portfolio.research.base import BaseResearch
 class ProfileResearch(BaseResearch[dict]):
     """Fetches company profile information for a ticker."""
 
-    def __init__(self, lookback_days: int = 0):
+    def __init__(self) -> None:
         self._client = finnhub.Client(api_key=get_settings().finnhub_api_key)
 
     def _fetch(self, ticker: str) -> dict:

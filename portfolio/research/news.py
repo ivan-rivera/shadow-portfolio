@@ -1,7 +1,7 @@
 """News retrieval for a given ticker via Finnhub."""
 
 import json
-from datetime import date, timedelta
+from datetime import UTC, datetime, timedelta
 
 import finnhub
 
@@ -21,7 +21,7 @@ class NewsResearch(BaseResearch[list[dict]]):
         """
         Fetches recent news articles for a ticker.
         """
-        end = date.today()
+        end = datetime.now(tz=UTC).date()
         start = end - timedelta(days=self._lookback_days)
         return self._client.company_news(
             ticker,

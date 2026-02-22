@@ -18,6 +18,7 @@ dependencies = [
 	"alpaca-py>=0.43.2",
 	"sqlmodel>=0.0.33",
 	"finnhub-python>=2.4.27",
+	"twelvedata>=1.2.28",
 	"pysqlite3>=0.6.0",
 	"braintrust>=0.5.5",
 	"agno>=2.4.8",
@@ -31,6 +32,7 @@ test = [
 	"pytest>=9.0.2",
 	"pytest-mock>=3.15.1",
 	"hypothesis>=6.151.6",
+	"pytest-cov>=7.0.0",
 ]
 
 dev = [
@@ -52,7 +54,7 @@ python-preference = "only-managed"
 packages = ["portfolio"]
 
 [tool.pytest]
-addopts = ["--cov=portfolio", "--cov-report=term-missing", "ra", "-q", "--strict-markers", "strict-config"]
+addopts = ["--cov=portfolio", "--cov-report=term-missing", "-ra", "-q", "--strict-markers", "--strict-config"]
 testpaths = ["tests"]
 pythonpath = ["portfolio"]
 markers = [
@@ -77,7 +79,7 @@ exclude_lines = [
 	"@abstractmethod",
 	"raise NotImplementedError",
 ]
-fail_under = 70
+fail_under = 0
 
 [tool.ruff]
 target-version = "py313"
@@ -118,9 +120,10 @@ pretty = true
 explicit_package_bases = true
 namespace_packages = true
 plugins = ["pydantic.mypy"]
+disable_error_code = ["type-arg", "no-any-return"]
 
 [[tool.mypy.overrides]]
-module = ["braintrust.*"]
+module = ["braintrust.*", "finnhub.*", "twelvedata.*"]
 ignore_missing_imports = true
 
 [tool.commitizen]

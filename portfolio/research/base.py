@@ -1,12 +1,9 @@
 """Base research abstractions."""
 
 from abc import ABC, abstractmethod
-from typing import Generic, TypeVar
-
-T = TypeVar("T")
 
 
-class BaseResearch(ABC, Generic[T]):
+class BaseResearch[T](ABC):
     """Base class for all research data providers."""
 
     def fetch(self, ticker: str) -> str:
