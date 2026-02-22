@@ -1,6 +1,8 @@
-from portfolio.research.fundamentals import FundamentalsRetriever
-from portfolio.research.indicators import IndicatorsRetriever
-from portfolio.research.news import NewsRetriever
-from portfolio.research.profile import ProfileRetriever
+"""Research module responsible for retrieving data from various sources"""
 
-__all__ = ["FundamentalsRetriever", "IndicatorsRetriever", "NewsRetriever", "ProfileRetriever"]
+from portfolio.research.fundamentals import FundamentalsResearch
+from portfolio.research.indicators import IndicatorsResearch
+from portfolio.research.news import NewsResearch
+from portfolio.research.profile import ProfileResearch
+
+__all__ = ["FundamentalsResearch", "IndicatorsResearch", "NewsResearch", "ProfileResearch"]

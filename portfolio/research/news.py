@@ -1,21 +1,23 @@
 """News retrieval for a given ticker via Finnhub."""
 
+import json
 from datetime import date, timedelta
 
 import finnhub
 
 from portfolio.config.constants import NEWS_LOOKBACK_DAYS
 from portfolio.config.settings import get_settings
+from portfolio.research.base import BaseResearch
 
 
-class NewsRetriever:
+class NewsResearch(BaseResearch[list[dict]]):
     """Fetches recent news articles for a ticker."""
 
     def __init__(self, lookback_days: int = NEWS_LOOKBACK_DAYS):
         self._lookback_days = lookback_days
         self._client = finnhub.Client(api_key=get_settings().finnhub_api_key)
 
-    def fetch(self, ticker: str) -> list[dict]:
+    def _fetch(self, ticker: str) -> list[dict]:
         """
         Fetches recent news articles for a ticker.
         """
@@ -26,3 +28,6 @@ class NewsRetriever:
             _from=start.isoformat(),
             to=end.isoformat(),
         )
+
+    def _compact(self, result: list[dict]) -> str:
+        return json.dumps(result)
