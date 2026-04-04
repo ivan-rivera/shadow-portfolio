@@ -3,13 +3,17 @@
 from collections.abc import Iterable
 
 from portfolio.research.base import BaseResearch
+from portfolio.research.fundamentals import FundamentalsResearch
 from portfolio.research.indicators import IndicatorsResearch
+from portfolio.research.news import NewsResearch
+from portfolio.research.profile import ProfileResearch
+
 
 _DEFAULT_PROVIDER_CLASSES = (
-    # FundamentalsResearch,
+    FundamentalsResearch,
     IndicatorsResearch,
-    # NewsResearch,
-    # ProfileResearch,
+    NewsResearch,
+    ProfileResearch,
 )
 
 

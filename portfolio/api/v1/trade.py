@@ -8,6 +8,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, BackgroundTasks, Depends
 
+from portfolio.config.settings import Settings, get_settings
 from portfolio.schemas.trade import TradeAcknowledgement
 from portfolio.services.trade import TradeService, get_trade_service
 
